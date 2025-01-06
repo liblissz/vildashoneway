@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML, CSS, and JavaScript IDE</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #1e1e1e;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .editor-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #ccc;
+        }
+
+        .editor-header {
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .editor {
+            flex: 1;
+            height: 100%;
+        }
+
+        .output-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .output-header {
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        iframe {
+            flex: 1;
+            border: none;
+        }
+
+        .button-container {
+            text-align: center;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+</head>
+<body>
+    <div class="header">HTML, CSS, and JavaScript IDE</div>
+
+    <div class="container">
+        <!-- HTML Editor -->
+        <div class="editor-container">
+            <div class="editor-header">HTML</div>
+            <div id="html-editor" class="editor"></div>
+        </div>
+
+        <!-- CSS Editor -->
+        <div class="editor-container">
+            <div class="editor-header">CSS</div>
+            <div id="css-editor" class="editor"></div>
+        </div>
+
+        <!-- JS Editor -->
+        <div class="editor-container">
+            <div class="editor-header">JavaScript</div>
+            <div id="js-editor" class="editor"></div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="btn" onclick="runCode()">Run Code</button>
+    </div>
+
+    <div class="output-container">
+        <div class="output-header">Output</div>
+        <iframe id="output-frame"></iframe>
+    </div>
+
+    <script>
+        // Initialize Ace Editors
+        const htmlEditor = ace.edit("html-editor");
+        htmlEditor.setTheme("ace/theme/monokai");
+        htmlEditor.session.setMode("ace/mode/html");
+
+        const cssEditor = ace.edit("css-editor");
+        cssEditor.setTheme("ace/theme/monokai");
+        cssEditor.session.setMode("ace/mode/css");
+
+        const jsEditor = ace.edit("js-editor");
+        jsEditor.setTheme("ace/theme/monokai");
+        jsEditor.session.setMode("ace/mode/javascript");
+
+        // Run the code and display output
+        function runCode() {
+            const htmlCode = htmlEditor.getValue();
+            const cssCode = `<style>${cssEditor.getValue()}</style>`;
+            const jsCode = `<script>${jsEditor.getValue()}<\/script>`;
+
+            const outputFrame = document.getElementById("output-frame");
+            const outputDoc = outputFrame.contentDocument || outputFrame.contentWindow.document;
+            outputDoc.open();
+            outputDoc.write(htmlCode + cssCode + jsCode);
+            outputDoc.close();
+        }
+    </script>
+</body>
+</html>

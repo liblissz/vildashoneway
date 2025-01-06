@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    }
+    .fb-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3b5998;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    }
+    .fb-logo img {
+    height: 40px;
+    }
+    .fb-search input {
+    width: 300px;
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    }
+    .fb-user-options {
+    display: flex;
+    align-items: center;
+    }
+    .fb-user {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    }
+    .user-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    }
+    .user-name {
+    font-weight: bold;
+    }
+    .fb-mode .mode-btn {
+    background-color: #4267b2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    .fb-mode .mode-btn:hover {
+    background-color: #365899;
+    }
+    @media screen and (max-width: 768px) {
+    .fb-search input {
+    width: 200px;
+    }
+   
+    }
+    @media screen and (max-width: 480px) {
+    .fb-search {
+    display: none;
+    }
+    .fb-user-options {
+    flex-direction: column;
+    }
+    .fb-user {
+    margin-right: 0;
+    margin-bottom: 10px;
+    }
+    .fb-mode .mode-btn {
+    padding: 5px;
+    margin: 0;
+    }
+    }
+    .after h1{
+        font-size: 20px;
+        
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        opacity: 0.9;
+        font-style: oblique;
+        color: #3b5998;
+transition-timing-function: cubic-bezier(3deg);
+box-shadow: 2px 5px 6px 7px rgba(0, 0, 0, 0.363);
+    }
+    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protected Page</title>
+</head>
+<body>
+
+
+
+    <script>
+        function searchContent() {
+        // Get the search query from the input field
+        const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+        // Get all elements you want to search through (e.g., paragraphs, headings)
+        const elementsToSearch = document.getElementsByTagName('main'); // Change this tocu
+        //match your specific elements
+        // Loop through the elements and show/hide based on the search query
+        for (let i = 0; i < elementsToSearch.length; i++) {
+        const textContent = elementsToSearch[i].textContent.toLowerCase();
+        if (textContent.includes(searchQuery)) {
+        elementsToSearch[i].style.display = 'block'; // Show matching elements
+        } else {
+        elementsToSearch[i].style.display = 'none'; // Hide non-matching elements
+        }
+        }
+        }
+        </script>
+
+
+    <header class="fb-header">
+        <div class="fb-logo">
+        LI BLISSZ DESIGNS
+        </div>
+        <div class="fb-search">
+            <input type="text" placeholder="Search pages" onkeyup="searchContent()" id="searchInput">
+        </div>
+        <div class="fb-user-options">
+        <div class="fb-user">
+       
+        <span class="user-name"><p id="userInfo"></p></span>
+        </div>
+       
+        </div>
+        </header>
+
+
+<div class="after" style="margin-top: -130px; position: absolute; justify-content: center;">
+    <h1> all of this web pages are entitled to a zip file with the codes and this zip files has password for your to get the passwordyou have to contact liblissz through through his email or on whatsapp. or contact <a href="tel:654598457">654598457</a>. for now this is all we've got more is comming</h1>
+</div>
+
+
+
+<div class="zips" style="margin-top: 200px; position: relative; display: flex; gap: 50px; flex-wrap: wrap; justify-content: center;">
+<main class="zip">
+    <img src="Capture.PNG" 
+    style="height: 30vh; border: 4px solid #4267b2;
+    border-radius: 10px;" alt="">
+    <footer style="width: 100%; background-color: rgba(24, 9, 9, 0.212); border-radius: 10px;">
+        <p>landing page1</p>
+        <a href="MY SITES\001liblissz.rar">zip file</a>
+        <p style="font-weight: bolder; font-family: sans-serif;">id: <span>001liblissz</span></p>
+    </footer>
+</main>
+
+
+
+<main class="zip">
+    <img src="IM3.PNG" 
+    style="height: 30vh; border: 4px solid #4267b2;
+    border-radius: 10px;" alt="">
+    <footer style="width: 100%; background-color: rgba(24, 9, 9, 0.212); border-radius: 10px;">
+        <p>landing page2</p>
+        <a href="">zip file</a>
+        <p style="font-weight: bolder; font-family: sans-serif;">id: <span>006liblissz</span></p>
+    </footer>
+   
+</main>
+
+
+
+<main class="zip">
+    <img src="IM2.PNG" 
+    style="height: 30vh; border: 4px solid #4267b2;
+    border-radius: 10px;" alt="">
+    <footer style="width: 100%; background-color: rgba(24, 9, 9, 0.212); border-radius: 10px;">
+        <p>landing page3</p>
+        <a href="">zip file</a>
+        <p style="font-weight: bolder; font-family: sans-serif;">id: <span>005liblissz</span></p>
+    </footer>
+   
+</main>
+
+
+
+<main class="zip">
+    <img src="IM2.PNG" 
+    style="height: 30vh; border: 4px solid #4267b2;
+    border-radius: 10px;" alt="">
+    <footer style="width: 100%; background-color: rgba(24, 9, 9, 0.212); border-radius: 10px;">
+        <p>landing page4</p>
+        <a href="">zip file</a>
+        <p style="font-weight: bolder; font-family: sans-serif;">id: <span>004liblissz</span></p>
+    </footer>
+   
+</main>
+</div>
+
+
+
+<script>
+// Get stored values from local storage
+const name = localStorage.getItem('name');
+const email = localStorage.getItem('email');
+const country = localStorage.getItem('country');
+// Display user information
+if (name && email && country) {
+document.getElementById('userInfo').innerText = ` ${name}`;
+//, Email: ${email},
+//Country: ${country}`;
+} else {
+document.getElementById('userInfo').innerText = 'hey there client';
+}
+</script>
+</body>
+</html>
